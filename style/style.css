@@ -590,4 +590,14 @@
                              height: auto;
                              text-align: right;
                          }
+                         .footer {
+                             display: grid;
+                             grid-template-columns: 1fr;
+                         }
+                         .hr1 {
+                             display: none;
+                         }
+                         .hr2 {
+                             display: none;
+                         }
                      }
