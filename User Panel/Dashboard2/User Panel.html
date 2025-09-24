@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
@@ -7,13 +7,16 @@
     <link rel="stylesheet" href="/User Panel/Dashboard2/style/User Panel-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>صفحه کاربری | داشبورد</title>
+    <style>
+
+    </style>
 </head>
 
-<body dir="rtl">
+<body>
     <header>
         <div class="btn-header">
-            <button>پشتیبانی</button>
-            <button>خروج از حساب</button>
+            <button class="support">پشتیبانی</button>
+            <button class="exit">خروج از حساب</button>
         </div>
         <div class="user-account">
             <div><i class="fas fa-user-circle fa-2x"></i></div>
@@ -37,8 +40,8 @@
                 <h1>سلام ارشیا!</h1>
                 <button><i class="fas fa-search"></i></button>
                 <div>جستجو کنید...</div>
-
             </div>
+
             <div class="wallet-section">
                 <div class="wallet-item">
                     <div>
@@ -76,65 +79,107 @@
                     </div>
                 </div>
             </div>
-
         </div>
+
         <div class="table-itame">
-            <div class="table-itame">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>کد سفارش</th>
-                            <th>نام محصول</th>
-                            <th>وضعیت ارسال</th>
-                            <th>تاریخ</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>۱۲۰۳۴</td>
-                            <td>گوشی موبایل</td>
-                            <td>ارسال شده</td>
-                            <td>۱۵ شهریور ۱۴۰۴</td>
-                        </tr>
-                        <tr>
-                            <td>۱۲۰۳۵</td>
-                            <td>هدفون بی‌سیم</td>
-                            <td>در حال پردازش</td>
-                            <td>۱۴ شهریور ۱۴۰۴</td>
-                        </tr>
-                        <tr>
-                            <td>۱۲۰۳۶</td>
-                            <td>لپ‌تاپ</td>
-                            <td>ارسال شده</td>
-                            <td>۱۳ شهریور ۱۴۰۴</td>
-                        </tr>
-                        <tr>
-                            <td>۱۲۰۳۷</td>
-                            <td>کیف لپ‌تاپ</td>
-                            <td>در حال پردازش</td>
-                            <td>۱۲ شهریور ۱۴۰۴</td>
-                        </tr>
-                        <tr>
-                            <td>۱۲۰۳۸</td>
-                            <td>ماوس گیمینگ</td>
-                            <td>ارسال شده</td>
-                            <td>۱۱ شهریور ۱۴۰۴</td>
-                        </tr>
-                        <tr>
-                            <td>۱۲۰۳۹</td>
-                            <td>کابل شارژ</td>
-                            <td>در انتظار ارسال</td>
-                            <td>۱۰ شهریور ۱۴۰۴</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-
-
+            <table>
+                <thead>
+                    <tr>
+                        <th>کد سفارش</th>
+                        <th>نام محصول</th>
+                        <th>وضعیت ارسال</th>
+                        <th>تاریخ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>۱۲۰۳۴</td>
+                        <td>گوشی موبایل</td>
+                        <td>ارسال شده</td>
+                        <td>۱۵ شهریور ۱۴۰۴</td>
+                    </tr>
+                    <tr>
+                        <td>۱۲۰۳۵</td>
+                        <td>هدفون بی‌سیم</td>
+                        <td>در حال پردازش</td>
+                        <td>۱۴ شهریور ۱۴۰۴</td>
+                    </tr>
+                    <tr>
+                        <td>۱۲۰۳۶</td>
+                        <td>لپ‌تاپ</td>
+                        <td>ارسال شده</td>
+                        <td>۱۳ شهریور ۱۴۰۴</td>
+                    </tr>
+                    <tr>
+                        <td>۱۲۰۳۷</td>
+                        <td>کیف لپ‌تاپ</td>
+                        <td>در حال پردازش</td>
+                        <td>۱۲ شهریور ۱۴۰۴</td>
+                    </tr>
+                    <tr>
+                        <td>۱۲۰۳۸</td>
+                        <td>ماوس گیمینگ</td>
+                        <td>ارسال شده</td>
+                        <td>۱۱ شهریور ۱۴۰۴</td>
+                    </tr>
+                    <tr>
+                        <td>۱۲۰۳۹</td>
+                        <td>کابل شارژ</td>
+                        <td>در انتظار ارسال</td>
+                        <td>۱۰ شهریور ۱۴۰۴</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
+    <!-- بخش پرسش‌های متداول -->
+    <div class="faq">
+        <h2>❓ پرسش‌های متداول</h2>
+        <div class="faq-item">
+            <h3>چطور می‌توانم رمز عبورم را تغییر دهم؟</h3>
+            <p>از بخش تنظیمات می‌توانید رمز عبور خود را تغییر دهید.</p>
+        </div>
+        <div class="faq-item">
+            <h3>آیا می‌توانم سفارش خود را لغو کنم؟</h3>
+            <p>بله، در صورتی که سفارش شما هنوز ارسال نشده باشد امکان لغو آن وجود دارد.</p>
+        </div>
+        <div class="faq-item">
+            <h3>چگونه با پشتیبانی تماس بگیرم؟</h3>
+            <p>از طریق بخش ثبت تیکت یا دکمه پشتیبانی در بالای صفحه.</p>
+        </div>
+    </div>
+
+    <!-- فوتر -->
+    <footer>
+        <div class="footer-links">
+            <div>
+                <h3>درباره ما</h3>
+                <p>این فروشگاه با هدف ارائه بهترین محصولات و خدمات آنلاین ایجاد شده است.</p>
+            </div>
+            <div>
+                <h3>لینک‌ها</h3>
+                <a href="#">خانه</a>
+                <a href="#">محصولات</a>
+                <a href="#">ارتباط با ما</a>
+            </div>
+            <div>
+                <h3>تماس با ما</h3>
+                <p><i class="fas fa-phone"></i> ۰۹۱۲۳۴۵۶۷۸۹</p>
+                <p><i class="fas fa-envelope"></i> info@test.com</p>
+            </div>
+        </div>
+        <p style="text-align:center; margin-top:20px;">© ۱۴۰۴ همه حقوق محفوظ است.</p>
+    </footer>
+
+    <script>
+        // باز و بسته شدن FAQ
+        document.querySelectorAll(".faq-item h3").forEach(item => {
+            item.addEventListener("click", () => {
+                item.parentElement.classList.toggle("active");
+            });
+        });
+    </script>
 </body>
 
 </html>

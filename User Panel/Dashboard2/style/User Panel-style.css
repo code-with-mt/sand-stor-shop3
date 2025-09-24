@@ -1,0 +1,72 @@
+  @font-face {
+      font-family: 'Shabnam';
+      src: url('/Shabnam/Shabnam-Light.woff2') format('woff2'), url('/Shabnam/Shabnam-Light.woff') format('woff');
+      font-weight: lighter;
+      font-style: normal;
+  }
+  
+  @font-face {
+      font-family: 'Shabnam';
+      src: url('/Shabnam/Shabnam-Light.woff2') format('woff2'), url('/Shabnam/Shabnam-Light.woff') format('woff');
+      font-weight: lighter;
+      font-style: normal;
+  }
+  
+   :root {
+      --blue: #3f76bf;
+      --darkblue: #1f2c56;
+      --orangea: #ffb907;
+      --white: #ffffff;
+  }
+  
+  * {
+      box-sizing: border-box;
+  }
+  
+  body {
+      font-family: Shabnam;
+      font-weight: lighter;
+      padding: 0;
+      margin: 0;
+      direction: rtl;
+      overflow-x: hidden;
+  }
+  
+  header {
+      background-color: var(--blue);
+      color: var(--white);
+      display: flex;
+      padding: 10px;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  header button {
+      color: var(--white);
+      width: auto;
+      height: 30px;
+      border-radius: 9px;
+      font-size: 1rem;
+      transition: all ease-in-out 0.4s;
+  }
+  
+  .support {
+      background-color: var(--darkblue);
+      font-family: Shabnam;
+  }
+  
+  .exit {
+      background-color: rgb(202, 32, 32);
+      font-family: Shabnam;
+  }
+  
+  header button:hover {
+      transform: scale(0.9);
+  }
+  
+  .user-account {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+  }
