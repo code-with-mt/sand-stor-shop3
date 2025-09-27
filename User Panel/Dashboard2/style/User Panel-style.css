@@ -1,72 +1,291 @@
-  @font-face {
-      font-family: 'Shabnam';
-      src: url('/Shabnam/Shabnam-Light.woff2') format('woff2'), url('/Shabnam/Shabnam-Light.woff') format('woff');
-      font-weight: lighter;
-      font-style: normal;
-  }
-  
-  @font-face {
-      font-family: 'Shabnam';
-      src: url('/Shabnam/Shabnam-Light.woff2') format('woff2'), url('/Shabnam/Shabnam-Light.woff') format('woff');
-      font-weight: lighter;
-      font-style: normal;
-  }
-  
-   :root {
-      --blue: #3f76bf;
-      --darkblue: #1f2c56;
-      --orangea: #ffb907;
-      --white: #ffffff;
-  }
-  
-  * {
-      box-sizing: border-box;
-  }
-  
-  body {
-      font-family: Shabnam;
-      font-weight: lighter;
-      padding: 0;
-      margin: 0;
-      direction: rtl;
-      overflow-x: hidden;
-  }
-  
-  header {
-      background-color: var(--blue);
-      color: var(--white);
-      display: flex;
-      padding: 10px;
-      justify-content: space-between;
-      align-items: center;
-  }
-  
-  header button {
-      color: var(--white);
-      width: auto;
-      height: 30px;
-      border-radius: 9px;
-      font-size: 1rem;
-      transition: all ease-in-out 0.4s;
-  }
-  
-  .support {
-      background-color: var(--darkblue);
-      font-family: Shabnam;
-  }
-  
-  .exit {
-      background-color: rgb(202, 32, 32);
-      font-family: Shabnam;
-  }
-  
-  header button:hover {
-      transform: scale(0.9);
-  }
-  
-  .user-account {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-  }
+@font-face {
+    font-family: 'Shabnam';
+    src: url('/Shabnam/Shabnam-Light.woff2') format('woff2'), url('/Shabnam/Shabnam-Light.woff') format('woff');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+:root {
+    --blue: #3f76bf;
+    --darkblue: #1f2c56;
+    --orangea: #ffb907;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Shabnam', Tahoma, sans-serif;
+    font-weight: lighter;
+    direction: rtl;
+    background-color: #f5f7fa;
+}
+
+
+/* === هدر === */
+
+header {
+    background-color: var(--blue);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header button {
+    color: var(--white);
+    height: 30px;
+    border: none;
+    border-radius: 9px;
+    font-size: 1rem;
+    font-family: Shabnam;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.support {
+    background-color: var(--darkblue);
+}
+
+.exit {
+    background-color: rgb(202, 32, 32);
+}
+
+header button:hover {
+    transform: scale(0.95);
+}
+
+.user-account {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-account i {
+    color: var(--orangea);
+}
+
+
+/* === لایه‌بندی اصلی داشبورد === */
+
+.dashboard-container {
+    display: flex;
+    height: calc(100vh - 70px);
+    /* 70px ≈ ارتفاع header + فوتر تقریبی */
+}
+
+.sidebare {
+    background-color: var(--darkblue);
+    color: var(--white);
+    width: 220px;
+    /* به جای vw برای ثبات بیشتر */
+    height: 100%;
+    border-radius: 0 0 0 20px;
+    padding-top: 20px;
+    overflow-y: auto;
+}
+
+.sidebare h1 {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding-right: 10px;
+}
+
+.sidebare p {
+    margin: 0;
+}
+
+.sidebare a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--white);
+    padding: 12px 20px;
+    margin: 5px 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.sidebare a:hover {
+    background-color: rgba(255, 185, 7, 0.2);
+    color: var(--orangea);
+}
+
+.sidebare i {
+    color: var(--orangea);
+    margin-left: 12px;
+    transition: transform 0.3s ease;
+}
+
+.sidebare a:hover i {
+    transform: translateX(-5px);
+}
+
+
+/* === محتوای اصلی === */
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f2f5;
+}
+
+.header-contant {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: var(--darkblue);
+    color: white;
+    height: 80px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    width: 250px;
+    font-family: Shabnam;
+}
+
+.search button {
+    background-color: var(--orangea);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    color: var(--darkblue);
+}
+
+
+/* === بخش محتوای اصلی === */
+
+.content {
+    padding: 25px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.wallet-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.wallet-item {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wallet-item p:first-child {
+    font-weight: bold;
+    color: var(--darkblue);
+}
+
+.wallet-item p:last-child {
+    color: var(--blue);
+}
+
+.table-itame {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: right;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #f8f9fa;
+    color: var(--darkblue);
+}
+
+
+/* === FAQ === */
+
+.faq {
+    padding: 40px 25px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq h2 {
+    margin-bottom: 20px;
+    color: var(--darkblue);
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.faq-item h3 {
+    margin-bottom: 8px;
+    cursor: pointer;
+    color: var(--blue);
+}
+
+
+/* === فوتر === */
+
+footer {
+    background-color: var(--darkblue);
+    color: white;
+    padding: 30px 25px;
+    margin-top: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-links div {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-links a {
+    display: block;
+    color: var(--orangea);
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}

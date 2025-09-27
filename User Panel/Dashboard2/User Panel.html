@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/User Panel/Dashboard2/style/User Panel-style.css">
+    <!-- فاصله اضافه در لینک CDN رفع شد -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>صفحه کاربری | داشبورد</title>
-    <style>
-
-    </style>
 </head>
 
 <body>
@@ -26,8 +24,10 @@
         </div>
     </header>
 
-    <div class="container1">
+    <!-- بخش اصلی داشبورد -->
+    <div class="dashboard-container">
         <div class="sidebare">
+            <h1>داشبورد </h1>
             <p><a href="#"><i class="fas fa-user"></i> پروفایل</a></p>
             <p><a href="#"><i class="fas fa-shopping-cart"></i> سفارش ها</a></p>
             <p><a href="#"><i class="fas fa-cog"></i> تنظیمات</a></p>
@@ -35,101 +35,102 @@
             <p><a href="#"><i class="fas fa-ticket-alt"></i> ثبت تیکت</a></p>
         </div>
 
-        <div class="content">
+        <div class="main-content">
             <div class="header-contant">
-                <h1>سلام ارشیا!</h1>
-                <button><i class="fas fa-search"></i></button>
-                <div>جستجو کنید...</div>
-            </div>
-
-            <div class="wallet-section">
-                <div class="wallet-item">
-                    <div>
-                        <p>کیف پول</p>
-                    </div>
-                    <div>
-                        <p>موجودی: ۵۰۰٬۰۰۰ تومان</p>
-                    </div>
-                </div>
-
-                <div class="wallet-item">
-                    <div>
-                        <p>آخرین خرید</p>
-                    </div>
-                    <div>
-                        <p>ساعت ۱۴:۳۰ - ۱۵ شهریور</p>
-                    </div>
-                </div>
-
-                <div class="wallet-item">
-                    <div>
-                        <p>تعداد سفارش‌ها</p>
-                    </div>
-                    <div>
-                        <p>۱۲ سفارش</p>
-                    </div>
-                </div>
-
-                <div class="wallet-item">
-                    <div>
-                        <p>پیام‌ها</p>
-                    </div>
-                    <div>
-                        <p>۳ پیام خوانده نشده</p>
-                    </div>
+                <h1>سلام ارشیا!👋</h1>
+                <div class="search">
+                    <button><i class="fas fa-search"></i></button>
+                    <input type="text" placeholder="جستجو کنید..">
                 </div>
             </div>
-        </div>
 
-        <div class="table-itame">
-            <table>
-                <thead>
-                    <tr>
-                        <th>کد سفارش</th>
-                        <th>نام محصول</th>
-                        <th>وضعیت ارسال</th>
-                        <th>تاریخ</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>۱۲۰۳۴</td>
-                        <td>گوشی موبایل</td>
-                        <td>ارسال شده</td>
-                        <td>۱۵ شهریور ۱۴۰۴</td>
-                    </tr>
-                    <tr>
-                        <td>۱۲۰۳۵</td>
-                        <td>هدفون بی‌سیم</td>
-                        <td>در حال پردازش</td>
-                        <td>۱۴ شهریور ۱۴۰۴</td>
-                    </tr>
-                    <tr>
-                        <td>۱۲۰۳۶</td>
-                        <td>لپ‌تاپ</td>
-                        <td>ارسال شده</td>
-                        <td>۱۳ شهریور ۱۴۰۴</td>
-                    </tr>
-                    <tr>
-                        <td>۱۲۰۳۷</td>
-                        <td>کیف لپ‌تاپ</td>
-                        <td>در حال پردازش</td>
-                        <td>۱۲ شهریور ۱۴۰۴</td>
-                    </tr>
-                    <tr>
-                        <td>۱۲۰۳۸</td>
-                        <td>ماوس گیمینگ</td>
-                        <td>ارسال شده</td>
-                        <td>۱۱ شهریور ۱۴۰۴</td>
-                    </tr>
-                    <tr>
-                        <td>۱۲۰۳۹</td>
-                        <td>کابل شارژ</td>
-                        <td>در انتظار ارسال</td>
-                        <td>۱۰ شهریور ۱۴۰۴</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="content">
+                <div class="wallet-section">
+                    <div class="wallet-item">
+                        <div>
+                            <p>کیف پول</p>
+                        </div>
+                        <div>
+                            <p>موجودی: ۵۰۰٬۰۰۰ تومان</p>
+                        </div>
+                    </div>
+                    <div class="wallet-item">
+                        <div>
+                            <p>آخرین خرید</p>
+                        </div>
+                        <div>
+                            <p>ساعت ۱۴:۳۰ - ۱۵ شهریور</p>
+                        </div>
+                    </div>
+                    <div class="wallet-item">
+                        <div>
+                            <p>تعداد سفارش‌ها</p>
+                        </div>
+                        <div>
+                            <p>۱۲ سفارش</p>
+                        </div>
+                    </div>
+                    <div class="wallet-item">
+                        <div>
+                            <p>پیام‌ها</p>
+                        </div>
+                        <div>
+                            <p>۳ پیام خوانده نشده</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-itame">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>کد سفارش</th>
+                                <th>نام محصول</th>
+                                <th>وضعیت ارسال</th>
+                                <th>تاریخ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>۱۲۰۳۴</td>
+                                <td>گوشی موبایل</td>
+                                <td>ارسال شده</td>
+                                <td>۱۵ شهریور ۱۴۰۴</td>
+                            </tr>
+                            <tr>
+                                <td>۱۲۰۳۵</td>
+                                <td>هدفون بی‌سیم</td>
+                                <td>در حال پردازش</td>
+                                <td>۱۴ شهریور ۱۴۰۴</td>
+                            </tr>
+                            <tr>
+                                <td>۱۲۰۳۶</td>
+                                <td>لپ‌تاپ</td>
+                                <td>ارسال شده</td>
+                                <td>۱۳ شهریور ۱۴۰۴</td>
+                            </tr>
+                            <tr>
+                                <td>۱۲۰۳۷</td>
+                                <td>کیف لپ‌تاپ</td>
+                                <td>در حال پردازش</td>
+                                <td>۱۲ شهریور ۱۴۰۴</td>
+                            </tr>
+                            <tr>
+                                <td>۱۲۰۳۸</td>
+                                <td>ماوس گیمینگ</td>
+                                <td>ارسال شده</td>
+                                <td>۱۱ شهریور ۱۴۰۴</td>
+                            </tr>
+                            <tr>
+                                <td>۱۲۰۳۹</td>
+                                <td>کابل شارژ</td>
+                                <td>در انتظار ارسال</td>
+                                <td>۱۰ شهریور ۱۴۰۴</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -173,7 +174,6 @@
     </footer>
 
     <script>
-        // باز و بسته شدن FAQ
         document.querySelectorAll(".faq-item h3").forEach(item => {
             item.addEventListener("click", () => {
                 item.parentElement.classList.toggle("active");
