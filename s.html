@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>مثال عملی last-child</title>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .table-itame {
+            max-width: 500px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+        
+        th,
+        td {
+            padding: 14px;
+            text-align: center;
+        }
+        
+        thead {
+            background-color: #4a6fa5;
+            color: white;
+        }
+        /* 👇 این قانون به همه سلول‌ها خط پایین می‌ده */
+        
+        tbody tr td {
+            border-bottom: 2px solid #e0e0e0;
+        }
+        /* 👇 این قانون از آخرین ردیف، خط پایین رو برمی‌داره */
+        
+        .table-itame tbody tr:last-child td {
+            border-bottom: none;
+        }
+        /* اختیاری: رنگ پس‌زمینه برای دید بهتر */
+        
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 style="text-align: center;">مثال: last-child در جدول</h2>
+
+    <div class="table-itame">
+        <table>
+            <thead>
+                <tr>
+                    <th>نام دانش‌آموز</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>علی</td>
+                </tr>
+                <tr>
+                    <td>رضا</td>
+                </tr>
+                <tr>
+                    <td>مریم</td>
+                </tr>
+                <!-- ⭐ این آخرین ردیف است -->
+                <tr>
+                    <td>سارا</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p style="text-align: center; margin-top: 20px; color: #555;">
+        ⚠️ توجه: خط زیر "سارا" وجود ندارد — چون آخرین ردیف است!
+    </p>
+
+</body>
+
+</html>
