@@ -141,8 +141,8 @@ header button:hover {
     justify-content: space-between;
     align-items: center;
     padding: 15px 25px;
-    background-color: var(--darkblue);
-    color: white;
+    /* background-color: var(--darkblu); */
+    color: var(--darkblue);
     height: 80px;
 }
 
@@ -363,3 +363,79 @@ header button:hover {
 
 
 /* === فوتر === */
+
+footer {
+    color: black;
+    margin: 0 auto;
+}
+
+.faq {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+}
+
+.faq h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-item h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 25px;
+}
+
+.faq-item h3::before {
+    content: "➕";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #007BFF;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.faq-item.active h3::before {
+    content: "➖";
+    color: #e63946;
+}
+
+.faq-item p {
+    display: none;
+    margin-top: 10px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.faq-item.active p {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
