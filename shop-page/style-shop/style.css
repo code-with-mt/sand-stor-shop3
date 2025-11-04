@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Shabnam';
+    src: url('/Shabnam/Shabnam-Light.woff2') format('woff2'), url('/Shabnam/Shabnam-Light.woff') format('woff');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Shabnam';
+    src: url('/Shabnam/Shabnam-Light.woff2') format('woff2'), url('/Shabnam/Shabnam-Light.woff') format('woff');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Shabnam;
+    font-weight: lighter;
+    padding: 20px;
+    direction: rtl;
+    overflow-x: hidden;
+}
+
+ :root {
+    --blue: #3f76bf;
+    --darkblue: #1f2c56;
+    --orangea: #ffb907;
+    --white: #ffffff;
+}
+
+.icon-card {
+    background-color: var(--blue);
+    color: #ffffff;
+    width: 200px;
+    border-radius: 20px;
+    transition: all ease 0.7s;
+}
+
+.icon-card i {
+    color: #1f2c56;
+    font-size: 1.5rem;
+    margin: 13px;
+}
+
+.icon-card a {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+}
+
+.icon-card:hover {
+    background-color: #708eb6;
+    color: #1f2c56;
+    transform: scale(1.2);
+}
