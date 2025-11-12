@@ -34,7 +34,8 @@ body {
 .icon-card {
     background-color: var(--blue);
     color: #ffffff;
-    width: 200px;
+    width: 150px;
+    height: 45px;
     border-radius: 20px;
     transition: all ease 0.7s;
 }
@@ -55,4 +56,183 @@ body {
     background-color: #708eb6;
     color: #1f2c56;
     transform: scale(1.2);
+}
+
+header {
+    background-color: #1f2c56;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 25px;
+    padding: 5px 15px;
+    width: 250px;
+    height: 40px;
+    transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-family: Shabnam;
+    font-size: 0.9rem;
+    color: var(--darkblue);
+    direction: rtl;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    color: var(--blue);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.search-bar button:hover {
+    color: var(--orangea);
+}
+
+.search-bar:hover {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+
+/* Header layout improvement */
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+/* Better visual hierarchy for title */
+
+header h1 {
+    color: var(--white);
+    font-size: 1.5rem;
+    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.2);
+    margin: 0;
+}
+
+.category-c {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.category {
+    color: var(--white);
+    background-color: var(--blue);
+    border-radius: 50px;
+    width: 110px;
+    height: 110px;
+    border: 3px solid rgb(226, 0, 128);
+    cursor: pointer;
+    text-align: center;
+    transition: all ease 0.5s;
+    margin: 10px;
+}
+
+.category p {
+    margin-top: 45px;
+}
+
+.category:hover {
+    transform: translateY(10px);
+}
+
+.Product-off-container {
+    display: flex;
+    flex-wrap: nowrap;
+    /* کارت‌ها در یک خط */
+    overflow-x: auto;
+    /* اسکرول افقی فعال */
+    gap: 15px;
+    /* فاصله بین کارت‌ها */
+    padding: 10px;
+    scroll-behavior: smooth;
+    /* اسکرول نرم */
+    /* مخفی کردن نوار اسکرول در مرورگرها */
+    -ms-overflow-style: none;
+    /* IE و Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.Product-off-container::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+.card {
+    flex: 0 0 auto;
+    /* جلوگیری از تغییر اندازه کارت */
+    height: 450px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    /* جلوه کوچک هنگام هاور */
+}
+
+.Product-off-container {
+    display: flex;
+    /* کارت‌ها کنار هم */
+    flex-wrap: nowrap;
+    /* هیچ کدام به خط بعدی نروند */
+    overflow-x: auto;
+    /* فعال کردن اسکرول افقی */
+    gap: 15px;
+    /* فاصله بین کارت‌ها */
+    padding: 10px;
+    scroll-behavior: smooth;
+    /* اسکرول نرم */
+    width: 100vw;
+    /* عرض برابر با کل صفحه */
+    box-sizing: border-box;
+    scrollbar-width: none;
+    background-color: #1f2c56;
+}
+
+.Product-off-container::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    flex: 0 0 auto;
+    /* جلوگیری از کوچک یا بزرگ شدن کارت */
+    width: 280px;
+    height: 450px;
+    border: 1px solid var(--darkblue);
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    padding: 5px;
+}
+
+.card img {
+    width: 80%;
+    height: auto;
+    margin-right: 28px;
+    margin-top: 5px;
+    border-bottom: 1px solid #1f2c56;
+}
+
+.card:hover {
+    transform: translateY(-10px);
 }
