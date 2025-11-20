@@ -259,9 +259,3 @@ header h1 {
     font-size: 1.5rem;
     color: var(--darkblue);
 }
-
-.card-box5 {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-}
