@@ -257,7 +257,11 @@ header h1 {
 
 .Product-off-container i {
     font-size: 1.5rem;
-    color: #1f2c56;
-    margin-bottom: 10px;
-    margin-left: 7px;
+    color: var(--darkblue);
+}
+
+.card-box5 {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
 }

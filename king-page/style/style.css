@@ -1,615 +1,795 @@
-                     @font-face {
-                         font-family: 'Shabnam';
-                         src: url('/Shabnam/Shabnam-Light.woff2') format('woff2'), url('/Shabnam/Shabnam-Light.woff') format('woff');
-                         font-weight: lighter;
-                         font-style: normal;
-                     }
-                     
-                     @font-face {
-                         font-family: 'Shabnam';
-                         src: url('/Shabnam/Shabnam-Light.woff2') format('woff2'), url('/Shabnam/Shabnam-Light.woff') format('woff');
-                         font-weight: lighter;
-                         font-style: normal;
-                     }
-                     
-                      :root {
-                         --blue: #3f76bf;
-                         --darkblue: #1f2c56;
-                         --orangea: #ffb907;
-                         --white: #ffffff;
-                     }
-                     
-                     * {
-                         box-sizing: border-box;
-                     }
-                     
-                     body {
-                         font-family: Shabnam;
-                         font-weight: lighter;
-                         padding: 20px;
-                         direction: rtl;
-                         overflow-x: hidden;
-                     }
-                     
-                     header {
-                         width: 100%;
-                         height: 80px;
-                         border-radius: 50px;
-                         background-color: var(--blue);
-                         color: white;
-                         display: grid;
-                         grid-template-columns: repeat(5, 1fr);
-                         align-items: center;
-                         justify-items: center;
-                     }
-                     
-                     header a {
-                         color: var(--white);
-                         text-decoration: none;
-                         transition: all ease 0.7s;
-                     }
-                     
-                     .icon-card a {
-                         color: white;
-                         font-size: 1.3rem;
-                     }
-                     
-                     .icon-card a:hover {
-                         color: var(--orangea);
-                     }
-                     
-                     .icon-card p {
-                         font-size: 0.7rem;
-                     }
-                     
-                     .account-text {
-                         position: absolute;
-                         top: 74px;
-                         right: 350px;
-                     }
-                     
-                     .sabad-kharid {
-                         position: absolute;
-                         top: 74px;
-                         right: 78px;
-                     }
-                     
-                     .titr_content {
-                         font-size: 2rem;
-                         color: var(--darkblue);
-                         font-weight: bold;
-                     }
-                     
-                     .container1 {
-                         display: grid;
-                         grid-template-columns: 1fr 1fr;
-                         /* دو ستون با عرض مساوی */
-                         gap: 30px;
-                         /* فاصله بین محتوا و عکس */
-                         margin: 2rem auto;
-                         /* مرکزسازی و فاصله مناسب */
-                         padding: 2rem;
-                         max-width: 1200px;
-                         /* محدود کردن عرض برای صفحه‌های بزرگ */
-                         align-items: center;
-                         /* تراز عمودی وسط */
-                     }
-                     
-                     .content {
-                         margin-right: 50px;
-                     }
-                     
-                     .text_content {
-                         font-size: 1.3rem;
-                         color: var(--darkblue);
-                     }
-                     
-                     .img1 img {
-                         border-radius: 50px;
-                         border: 1px solid black;
-                         object-fit: cover;
-                         width: 400px;
-                         height: 400px;
-                     }
-                     
-                     .Category {
-                         width: 100%;
-                         height: auto;
-                         transition: all ease 0.7s;
-                         display: grid;
-                         grid-template-columns: repeat(3, 125px);
-                         gap: 40px;
-                         justify-content: center;
-                         direction: ltr;
-                         padding: 0 20px;
-                     }
-                     
-                     .box a {
-                         text-decoration: none;
-                         color: #ffffff;
-                         margin: 0 auto;
-                     }
-                     
-                     .box {
-                         width: 125px;
-                         height: 125px;
-                         border-radius: 30px;
-                         border: 1px solid var(--blue);
-                         background-color: var(--blue);
-                         display: flex;
-                         align-items: center;
-                         justify-content: center;
-                         font-size: 1rem;
-                         transition: all ease 0.5s;
-                         cursor: pointer;
-                     }
-                     
-                     .box:hover {
-                         background-color: var(--darkblue);
-                     }
-                     
-                     .titrcategori {
-                         text-align: center;
-                         color: var(--darkblue);
-                         font-size: 2rem;
-                     }
-                     
-                     .Products {
-                         background-color: var(--blue);
-                         width: 100%;
-                         display: flex;
-                         flex-wrap: wrap;
-                         /* این باعث میشه کارت‌ها تو چند ردیف بچینن */
-                         padding: 20px;
-                         margin: 50px auto;
-                         gap: 20px;
-                         /* فاصله بین کارت‌ها */
-                         justify-content: center;
-                         /* وسط‌چین قشنگ */
-                         box-sizing: border-box;
-                     }
-                     
-                     .products img {
-                         object-fit: cover;
-                         width: 100px;
-                         height: 250px;
-                         border-radius: 50px;
-                         border: 1px solid var(--orangea);
-                     }
-                     
-                     .card img {
-                         width: auto;
-                         height: 250px;
-                         object-fit: cover;
-                         border-radius: 15px;
-                         border: 2px solid var(--orangea);
-                         display: block;
-                         margin: 1px;
-                     }
-                     
-                     .old-price {
-                         text-decoration: line-through;
-                         /* خط وسط متن */
-                         color: rgb(144, 0, 0);
-                         /* رنگ محو برای قیمت قبلی */
-                     }
-                     
-                     .card {
-                         width: 270px;
-                         /* height حذف شد — اجازه بده محتوا تعیین کنه */
-                         background-color: #ffffff;
-                         border: 1px solid var(--blue);
-                         border-radius: 16px;
-                         padding: 16px;
-                         color: var(--darkblue);
-                         /* ✅ رنگ متن رو تغییر دادم (قبلاً white بود!) */
-                         display: flex;
-                         flex-direction: column;
-                         align-items: center;
-                         text-align: center;
-                         transition: all 0.3s ease;
-                         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-                     }
-                     
-                     .card button {
-                         background-color: var(--darkblue);
-                         color: var(--orangea);
-                         font-family: Shabnam;
-                         border-radius: 10px;
-                         width: 100px;
-                         height: 40px;
-                         position: absolute;
-                         bottom: 14px;
-                         left: 20px;
-                         transition: all ease 0.7s;
-                     }
-                     
-                     .card button:hover {
-                         transform: scale(1.2);
-                         background-color: #ffc107;
-                         color: #1f2c56;
-                     }
-                     
-                     .rating {
-                         color: goldenrod;
-                     }
-                     
-                     .Products-titr {
-                         text-shadow: 2px 3px 4px var(--blue);
-                         color: var(--darkblue);
-                         text-align: center;
-                         font-size: 2rem;
-                         margin: 25px;
-                         padding: 5px;
-                     }
-                     
-                     .shop {
-                         width: calc(100%-40px);
-                         height: 200px;
-                         color: var(--darkblue);
-                         background-color: rgb(227, 227, 227);
-                         border-radius: 20px;
-                         padding: 10px;
-                         margin: 20px;
-                         font-weight: bold;
-                         text-align: center;
-                         font-size: 2rem;
-                         transition: all ease 0.5s;
-                     }
-                     
-                     .shop button {
-                         background-color: #3f76bf;
-                         color: #1f2c56;
-                         border-radius: 5px;
-                         height: 50px;
-                         width: 123px;
-                         font-size: 1rem;
-                         font-weight: bold;
-                         font-family: Shabnam;
-                         cursor: pointer;
-                     }
-                     
-                     .shop button:hover {
-                         background-color: var(--darkblue);
-                         color: var(--blue);
-                         animation: btnhover 0.5s infinite ease-in-out;
-                     }
-                     
-                     @keyframes btnhover {
-                         0% {
-                             transform: scale(1);
-                         }
-                         50% {
-                             transform: scale(1.2);
-                         }
-                         100% {
-                             transform: scale(1);
-                         }
-                     }
-                     
-                     .why-sandstore h2 {
-                         font-weight: bold;
-                         font-size: 2rem;
-                         text-align: center;
-                         color: #1f2c56;
-                     }
-                     
-                     .reason i {
-                         color: var(--orangea);
-                         font-size: 1.5rem;
-                     }
-                     
-                     .reason {
-                         background-color: #3f76bf;
-                         color: white;
-                         padding: 20px;
-                         border-radius: 50px;
-                         width: 500px;
-                         height: auto;
-                         text-align: right;
-                     }
-                     
-                     .box1r,
-                     .box3r {
-                         margin-right: 800px;
-                         margin-top: 20px;
-                     }
-                     
-                     .box2r,
-                     .box4r {
-                         margin-left: 800px;
-                         margin-top: 20px;
-                     }
-                     
-                     .about {
-                         display: flex;
-                         justify-content: center;
-                         /* وسط‌چین افقی */
-                         align-items: center;
-                         /* وسط‌چین عمودی */
-                         gap: 30px;
-                         /* فاصله بین باکس‌ها */
-                         margin: 50px auto;
-                         width: 80vw;
-                         padding-top: 30px;
-                         flex-wrap: wrap;
-                         /* اگه صفحه کوچیک شد، بیفته زیر هم */
-                     }
-                     
-                     .box-titr {
-                         border-radius: 30% 70% / 50% 50%;
-                         border: 1px solid var(--darkblue);
-                         background-color: var(--blue);
-                         width: 210px;
-                         height: 210px;
-                         display: flex;
-                         align-items: center;
-                         justify-content: center;
-                         font-size: 1.6rem;
-                         color: white;
-                     }
-                     
-                     .about-box {
-                         border-radius: 30px;
-                         border: 1px solid var(--darkblue);
-                         background-color: var(--blue);
-                         color: white;
-                         width: 600px;
-                         height: auto;
-                         padding: 20px;
-                     }
-                     /* بخش کلی */
-                     
-                     .box-fizik-shop {
-                         background: linear-gradient(135deg, #f7f7f7, #ffffff);
-                         border-radius: 20px;
-                         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-                         padding: 30px;
-                         margin: 50px auto;
-                         max-width: 1100px;
-                         text-align: center;
-                         transition: all 0.3s ease;
-                     }
-                     
-                     .box-fizik-shop:hover {
-                         transform: translateY(-5px);
-                         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-                     }
-                     /* تیتر اصلی */
-                     
-                     .h2-fizik-shop {
-                         font-size: 26px;
-                         font-weight: bold;
-                         color: #1f2c56;
-                         margin-bottom: 20px;
-                         position: relative;
-                     }
-                     
-                     .h2-fizik-shop::after {
-                         content: "";
-                         display: block;
-                         width: 80px;
-                         height: 3px;
-                         background: #ff6a00;
-                         margin: 10px auto 0;
-                         border-radius: 10px;
-                     }
-                     /* توضیحات فروشگاه */
-                     
-                     .description-fizik-shop {
-                         margin-bottom: 25px;
-                     }
-                     
-                     .titrshop {
-                         font-size: 20px;
-                         font-weight: bold;
-                         color: #333;
-                         margin-bottom: 10px;
-                     }
-                     
-                     .text-fizik-shop {
-                         font-size: 16px;
-                         color: #555;
-                         background: #f0f0f0;
-                         display: inline-block;
-                         padding: 10px 20px;
-                         border-radius: 12px;
-                         box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
-                     }
-                     /* عکس فروشگاه */
-                     
-                     .img-fiziki-shop {
-                         margin-top: 20px;
-                     }
-                     /* عکس فروشگاه */
-                     
-                     .img-fiziki-shop img {
-                         width: 100%;
-                         max-width: 900px;
-                         border-radius: 20px;
-                         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-                         transition: transform 0.4s ease;
-                     }
-                     
-                     .footer hr {
-                         color: var(--darkblue);
-                         width: 145px;
-                         transform: rotateZ(90deg);
-                     }
-                     
-                     .footer {
-                         background-color: #f8f9fa;
-                         color: var(--darkblue);
-                         display: flex;
-                         justify-content: center;
-                         padding: 30px 20px;
-                         border-top-left-radius: 20px;
-                         border-top-right-radius: 20px;
-                         box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-                     }
-                     
-                     .footer a {
-                         text-decoration: none;
-                         color: var(--orangea);
-                         transition: color 0.3s ease;
-                     }
-                     
-                     .footer a:hover {
-                         color: var(--blue);
-                     }
-                     
-                     .footer ul {
-                         list-style-type: none;
-                         padding: 0;
-                         margin: 0;
-                     }
-                     
-                     .footer ul li {
-                         margin: 10px 0;
-                         padding: 5px 0;
-                     }
-                     
-                     .footer h3 {
-                         margin-bottom: 15px;
-                         font-size: 1.1em;
-                         border-bottom: 2px solid var(--orangea);
-                         padding-bottom: 8px;
-                     }
-                     
-                     .hr1 {
-                         border-bottom: hidden;
-                         border-top: hidden;
-                         border-right: hidden;
-                         border-left: 2px solid var(--blue);
-                         margin: 27px;
-                         height: 140px;
-                     }
-                     
-                     .hr2 {
-                         border-bottom: hidden;
-                         border-top: hidden;
-                         border-right: 2px solid var(--blue);
-                         border-left: hidden;
-                         margin: 27px;
-                         height: 140px;
-                     }
-                     
-                     .copyright {
-                         background-color: var(--blue);
-                         padding: 20px;
-                         text-align: center;
-                         color: var(--white);
-                         font-weight: bold;
-                     }
-                     
-                     .footer-section1,
-                     .footer-section2,
-                     .footer-section3 {
-                         text-align: center;
-                         padding: 0 15px;
-                     }
-                     
-                     .footer-section3 img {
-                         width: 350px;
-                         height: 180px;
-                         border-radius: 10px;
-                         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-                     }
-                     
-                     @media (max-width: 1024px) {
-                         .about1,
-                         .call-me {
-                             display: none;
-                         }
-                         header {
-                             grid-template-columns: repeat(3, 1fr);
-                         }
-                         header h1 {
-                             font-size: 1.7rem;
-                         }
-                         .container1 {
-                             grid-template-columns: 1fr;
-                             gap: 20px;
-                             padding: 1.5rem;
-                             text-align: center;
-                         }
-                         .content {
-                             margin-right: 0;
-                             order: 2;
-                             /* محتوا بعد از عکس نمایش داده میشه */
-                         }
-                         .img1 {
-                             order: 1;
-                             /* عکس اول نمایش داده میشه */
-                         }
-                         .img1 img {
-                             width: 100%;
-                             max-width: 350px;
-                             height: 350px;
-                         }
-                         .titr_content {
-                             font-size: 1.8rem;
-                         }
-                         .text_content {
-                             font-size: 1.1rem;
-                         }
-                         .card {
-                             width: 170px;
-                             height: 250px;
-                             padding: 6px;
-                             font-size: 0.7rem;
-                         }
-                         .card img {
-                             width: 100px;
-                             height: 100px;
-                         }
-                         .card button {
-                             width: 60px;
-                             height: 30px;
-                             border-radius: 6px;
-                             font-size: 0.5rem;
-                             left: 10px;
-                         }
-                         .why-sandstore {
-                             grid-template-columns: 1fr;
-                             margin-right: 0px;
-                             margin-left: 0px;
-                             gap: 20px;
-                             padding: 1.5rem;
-                         }
-                         .box1r,
-                         .box3r {
-                             margin-right: 0px;
-                             margin-top: 20px;
-                         }
-                         .box2r,
-                         .box4r {
-                             margin-left: 0px;
-                             margin-top: 20px;
-                         }
-                         .reason {
-                             width: 350px;
-                             height: auto;
-                             text-align: right;
-                         }
-                         .footer {
-                             display: grid;
-                             grid-template-columns: 1fr;
-                         }
-                         .hr1 {
-                             display: none;
-                         }
-                         .hr2 {
-                             display: none;
-                         }
-                     }
-                     /* مخفی کردن در اندازه لپ‌تاپ */
-                     
-                     @media (min-width: 1024px) and (max-width: 1600px) {
-                         .account-text {
-                             display: none;
-                         }
-                         .sabad-kharid {
-                             display: none;
-                         }
-                     }
+/* ========================================
+   فونت‌های فارسی - Shabnam
+   ======================================== */
+
+@font-face {
+    font-family: 'Shabnam';
+    src: url('/Shabnam/Shabnam-Light.woff2') format('woff2'), url('/Shabnam/Shabnam-Light.woff') format('woff');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+
+/* ========================================
+   متغیرهای رنگی سفارشی
+   ======================================== */
+
+:root {
+    --blue: #3f76bf;
+    /* آبی اصلی */
+    --darkblue: #1f2c56;
+    /* آبی تیره */
+    --orangea: #ffb907;
+    /* نارنجی تاکیدی */
+    --white: #ffffff;
+    /* سفید */
+}
+
+
+/* ========================================
+   تنظیمات کلی
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+    /* محاسبه صحیح اندازه‌ها با padding و border */
+}
+
+body {
+    font-family: Shabnam, sans-serif;
+    /* فونت اصلی با fallback */
+    font-weight: lighter;
+    padding: 20px;
+    direction: rtl;
+    /* راست‌چین برای فارسی */
+    overflow-x: hidden;
+    /* جلوگیری از اسکرول افقی */
+    margin: 0;
+    /* حذف margin پیش‌فرض */
+}
+
+
+/* ========================================
+   هدر - منوی بالای صفحه
+   ======================================== */
+
+header {
+    width: 100%;
+    height: 80px;
+    border-radius: 50px;
+    background-color: var(--blue);
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 5 ستون یکسان */
+    align-items: center;
+    justify-items: center;
+    padding: 0 20px;
+    /* فاصله داخلی برای موبایل */
+}
+
+header a {
+    color: var(--white);
+    text-decoration: none;
+    transition: all ease 0.7s;
+    /* انیمیشن نرم */
+}
+
+header a:hover {
+    color: var(--orangea);
+    /* تغییر رنگ هنگام hover */
+}
+
+
+/* ========================================
+   آیکون‌های هدر
+   ======================================== */
+
+.icon-card {
+    position: relative;
+    /* برای موقعیت‌دهی متن زیر آیکون */
+}
+
+.icon-card a {
+    color: white;
+    font-size: 1.3rem;
+}
+
+.icon-card a:hover {
+    color: var(--orangea);
+}
+
+.icon-card p {
+    font-size: 0.7rem;
+    margin-top: 5px;
+}
+
+
+/* متن‌های زیر آیکون‌ها - موقعیت دهی مطلق */
+
+.account-text {
+    position: absolute;
+    top: 74px;
+    right: 350px;
+}
+
+.sabad-kharid {
+    position: absolute;
+    top: 74px;
+    right: 78px;
+}
+
+
+/* ========================================
+   بخش معرفی - container1
+   ======================================== */
+
+.titr_content {
+    font-size: 2rem;
+    color: var(--darkblue);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.container1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* دو ستون برابر */
+    gap: 30px;
+    /* فاصله بین عکس و متن */
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 1200px;
+    /* محدودیت عرض برای صفحات بزرگ */
+    align-items: center;
+}
+
+.content {
+    margin-right: 50px;
+}
+
+.text_content {
+    font-size: 1.3rem;
+    color: var(--darkblue);
+    line-height: 1.8;
+    /* فاصله خطوط برای خوانایی بهتر */
+}
+
+.img1 img {
+    border-radius: 50px;
+    border: 1px solid black;
+    object-fit: cover;
+    /* تصویر را بدون کشیدگی پر می‌کند */
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    display: block;
+}
+
+
+/* ========================================
+   دسته‌بندی محصولات - Category
+   ======================================== */
+
+.titrcategori {
+    text-align: center;
+    color: var(--darkblue);
+    font-size: 2rem;
+    margin: 40px 0 30px;
+}
+
+.Category {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 125px);
+    /* 3 ستون با عرض ثابت */
+    gap: 40px;
+    justify-content: center;
+    padding: 0 20px;
+    margin-bottom: 50px;
+}
+
+.box {
+    width: 125px;
+    height: 125px;
+    border-radius: 30px;
+    border: 1px solid var(--blue);
+    background-color: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+
+.box a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.box:hover {
+    background-color: var(--darkblue);
+    /* تغییر رنگ هنگام hover */
+    transform: translateY(-5px);
+    /* بالا آمدن نرم */
+}
+
+
+/* ========================================
+   محصولات - Products Section
+   ======================================== */
+
+.Products-titr {
+    text-shadow: 2px 3px 4px var(--blue);
+    color: var(--darkblue);
+    text-align: center;
+    font-size: 2rem;
+    margin: 25px 0;
+    padding: 5px;
+}
+
+.Products {
+    background-color: var(--blue);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* کارت‌ها در چند ردیف قرار می‌گیرند */
+    padding: 20px;
+    margin: 50px auto;
+    gap: 20px;
+    /* فاصله بین کارت‌ها */
+    justify-content: center;
+    /* وسط‌چین */
+    box-sizing: border-box;
+    border-radius: 20px;
+    /* گرد کردن گوشه‌ها */
+}
+
+
+/* ========================================
+   کارت محصول - Product Card
+   ======================================== */
+
+.card {
+    width: 270px;
+    min-height: 400px;
+    /* حداقل ارتفاع برای یکنواختی */
+    background-color: #ffffff;
+    border: 1px solid var(--blue);
+    border-radius: 16px;
+    padding: 16px;
+    color: var(--darkblue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: relative;
+    /* برای دکمه absolute */
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    /* بالا آمدن هنگام hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    max-width: 200px;
+    height: 250px;
+    object-fit: cover;
+    /* تصویر را بدون کشیدگی پر می‌کند */
+    border-radius: 15px;
+    border: 2px solid var(--orangea);
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: var(--darkblue);
+}
+
+.rating {
+    color: goldenrod;
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+
+/* قیمت قبلی با خط وسط */
+
+.old-price {
+    text-decoration: line-through;
+    color: rgb(144, 0, 0);
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+
+/* قیمت فعلی */
+
+.card .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--darkblue);
+    margin: 10px 0 50px;
+    /* فاصله برای دکمه */
+}
+
+
+/* دکمه افزودن به سبد */
+
+.card button {
+    background-color: var(--darkblue);
+    color: var(--orangea);
+    font-family: Shabnam, sans-serif;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 14px;
+    transition: all ease 0.7s;
+}
+
+.card button:hover {
+    transform: scale(1.2);
+    /* بزرگ‌تر شدن */
+    background-color: #ffc107;
+    color: #1f2c56;
+}
+
+
+/* ========================================
+   بخش دعوت به فروشگاه - Shop
+   ======================================== */
+
+.shop {
+    width: calc(100% - 40px);
+    height: auto;
+    min-height: 200px;
+    color: var(--darkblue);
+    background-color: rgb(227, 227, 227);
+    border-radius: 20px;
+    padding: 30px 20px;
+    margin: 40px 20px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+    transition: all ease 0.5s;
+}
+
+.shop p {
+    margin-bottom: 20px;
+}
+
+.shop button {
+    background-color: #3f76bf;
+    color: #1f2c56;
+    border-radius: 5px;
+    height: 50px;
+    width: 200px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: Shabnam, sans-serif;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.shop button:hover {
+    background-color: var(--darkblue);
+    color: var(--blue);
+    animation: btnhover 0.5s infinite ease-in-out;
+}
+
+
+/* انیمیشن دکمه */
+
+@keyframes btnhover {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* ========================================
+   چرا ساند استور - Why Section
+   ======================================== */
+
+.why-sandstore {
+    margin: 50px 0;
+    padding: 20px;
+}
+
+.why-sandstore h2 {
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    color: #1f2c56;
+    margin-bottom: 40px;
+}
+
+.reason {
+    background-color: #3f76bf;
+    color: white;
+    padding: 20px;
+    border-radius: 50px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    text-align: right;
+    margin: 20px auto;
+    /* وسط‌چین در حالت موبایل */
+}
+
+.reason h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.reason i {
+    color: var(--orangea);
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.reason p {
+    line-height: 1.8;
+}
+
+
+/* موقعیت‌دهی مخصوص دسکتاپ */
+
+.box1r,
+.box3r {
+    margin-right: auto;
+    margin-left: 100px;
+}
+
+.box2r,
+.box4r {
+    margin-left: auto;
+    margin-right: 100px;
+}
+
+
+/* ========================================
+   درباره ما - About Section
+   ======================================== */
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 50px auto;
+    width: 80vw;
+    padding-top: 30px;
+    flex-wrap: wrap;
+    /* ریسپانسیو */
+}
+
+.box-titr {
+    border-radius: 30% 70% / 50% 50%;
+    /* شکل خاص */
+    border: 1px solid var(--darkblue);
+    background-color: var(--blue);
+    width: 210px;
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: white;
+    flex-shrink: 0;
+    /* جلوگیری از کوچک شدن */
+}
+
+.about-box {
+    border-radius: 30px;
+    border: 1px solid var(--darkblue);
+    background-color: var(--blue);
+    color: white;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    padding: 20px;
+}
+
+.about-box p {
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   فروشگاه فیزیکی
+   ======================================== */
+
+.box-fizik-shop {
+    background: linear-gradient(135deg, #f7f7f7, #ffffff);
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 50px auto;
+    max-width: 1100px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.box-fizik-shop:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.h2-fizik-shop {
+    font-size: 26px;
+    font-weight: bold;
+    color: #1f2c56;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+
+/* خط زیر عنوان */
+
+.h2-fizik-shop::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #ff6a00;
+    margin: 10px auto 0;
+    border-radius: 10px;
+}
+
+.description-fizik-shop {
+    margin-bottom: 25px;
+}
+
+.titrshop {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.text-fizik-shop {
+    font-size: 16px;
+    color: #555;
+    background: #f0f0f0;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.img-fiziki-shop {
+    margin-top: 20px;
+}
+
+.img-fiziki-shop img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease;
+}
+
+.img-fiziki-shop img:hover {
+    transform: scale(1.02);
+    /* بزرگ‌نمایی نرم */
+}
+
+
+/* ========================================
+   فوتر - Footer
+   ======================================== */
+
+.footer {
+    background-color: #f8f9fa;
+    color: var(--darkblue);
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--orangea);
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--blue);
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    margin: 10px 0;
+    padding: 5px 0;
+}
+
+.footer h3 {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    border-bottom: 2px solid var(--orangea);
+    padding-bottom: 8px;
+}
+
+.footer-section1,
+.footer-section2,
+.footer-section3 {
+    text-align: center;
+    padding: 0 15px;
+}
+
+.footer-section3 img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* خطوط جداکننده فوتر */
+
+.hr1 {
+    border-bottom: hidden;
+    border-top: hidden;
+    border-right: hidden;
+    border-left: 2px solid var(--blue);
+    margin: 0 27px;
+    height: 140px;
+    align-self: center;
+}
+
+.hr2 {
+    border-bottom: hidden;
+    border-top: hidden;
+    border-right: 2px solid var(--blue);
+    border-left: hidden;
+    margin: 0 27px;
+    height: 140px;
+    align-self: center;
+}
+
+
+/* ========================================
+   کپی‌رایت
+   ======================================== */
+
+.copyright {
+    background-color: var(--blue);
+    padding: 20px;
+    text-align: center;
+    color: var(--white);
+    font-weight: bold;
+}
+
+
+/* ========================================
+   رسپانسیو - تبلت و موبایل
+   ======================================== */
+
+@media (max-width: 1024px) {
+    /* مخفی کردن بخش‌های اضافی */
+    .about1,
+    .call-me {
+        display: none;
+    }
+    /* هدر - 3 ستونی */
+    header {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    header h1 {
+        font-size: 1.7rem;
+    }
+    /* بخش معرفی - تک ستونی */
+    .container1 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 1.5rem;
+        text-align: center;
+    }
+    .content {
+        margin-right: 0;
+        order: 2;
+        /* متن بعد از عکس */
+    }
+    .img1 {
+        order: 1;
+        /* عکس اول */
+    }
+    .img1 img {
+        width: 100%;
+        max-width: 350px;
+        height: 350px;
+    }
+    .titr_content {
+        font-size: 1.8rem;
+    }
+    .text_content {
+        font-size: 1.1rem;
+    }
+    /* کارت محصول - کوچک‌تر */
+    .card {
+        width: 170px;
+        min-height: 250px;
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+    .card img {
+        width: 100px;
+        height: 100px;
+    }
+    .card button {
+        width: 70px;
+        height: 30px;
+        border-radius: 6px;
+        font-size: 0.6rem;
+        bottom: 10px;
+        left: 10px;
+    }
+    /* بخش مزایا - تک ستونی */
+    .why-sandstore {
+        padding: 1.5rem;
+    }
+    .box1r,
+    .box2r,
+    .box3r,
+    .box4r {
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .reason {
+        width: 100%;
+        max-width: 350px;
+    }
+    /* فوتر - تک ستونی */
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .hr1,
+    .hr2 {
+        display: none;
+        /* مخفی کردن خطوط جداکننده */
+    }
+}
+
+
+/* ========================================
+   رسپانسیو - لپ‌تاپ
+   ======================================== */
+
+@media (min-width: 1024px) and (max-width: 1600px) {
+    /* مخفی کردن متن‌های زیر آیکون */
+    .account-text,
+    .sabad-kharid {
+        display: none;
+    }
+}
