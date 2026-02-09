@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'Shabnam';
+    src: url('/Shabnam/Shabnam-Light.woff2') format('woff2'), url('/Shabnam/Shabnam-Light.woff') format('woff');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Shabnam';
+    src: url('/Shabnam/Shabnam-Light.woff2') format('woff2'), url('/Shabnam/Shabnam-Light.woff') format('woff');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Shabnam;
+    font-weight: lighter;
+    padding: 20px;
+    direction: rtl;
+    overflow-x: hidden;
+}
+
+ :root {
+    --blue: #3f76bf;
+    --darkblue: #1f2c56;
+    --orangea: #ffb907;
+    --white: #ffffff;
+}
+
+.icon-card {
+    background-color: var(--blue);
+    color: #ffffff;
+    width: 150px;
+    height: 45px;
+    border-radius: 20px;
+    transition: all ease 0.7s;
+}
+
+.icon-card i {
+    color: #1f2c56;
+    font-size: 1.5rem;
+    margin: 13px;
+}
+
+.icon-card a {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+}
+
+.icon-card:hover {
+    background-color: #708eb6;
+    color: #1f2c56;
+    transform: scale(1.2);
+}
+
+header {
+    background-color: #1f2c56;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 25px;
+    padding: 5px 15px;
+    width: 250px;
+    height: 40px;
+    transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-family: Shabnam;
+    font-size: 0.9rem;
+    color: var(--darkblue);
+    direction: rtl;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    color: var(--blue);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.search-bar button:hover {
+    color: var(--orangea);
+}
+
+.search-bar:hover {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+
+/* Header layout improvement */
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+/* Better visual hierarchy for title */
+
+header h1 {
+    color: var(--white);
+    font-size: 1.5rem;
+    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.2);
+    margin: 0;
+}
